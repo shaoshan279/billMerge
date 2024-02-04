@@ -12,6 +12,7 @@ import org.bill.ui.BillUI;
 public class WechatPayBill extends AbstractBillMergeService {
 	@Override
 	protected BillUI readData(BillDto billDto) {
+		// todo 微信文件解析
 		return null;
 	}
 }

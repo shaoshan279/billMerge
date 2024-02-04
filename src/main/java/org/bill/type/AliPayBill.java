@@ -12,6 +12,7 @@ import org.bill.ui.BillUI;
 public class AliPayBill extends AbstractBillMergeService {
 	@Override
 	protected BillUI readData(BillDto billDto) {
+		// todo 支付宝文件解析
 		return null;
 	}
 }

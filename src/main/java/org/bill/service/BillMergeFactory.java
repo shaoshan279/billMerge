@@ -1,7 +1,5 @@
 package org.bill.service;
 
-import com.sun.istack.internal.NotNull;
-import com.sun.istack.internal.Nullable;
 import lombok.NonNull;
 import org.bill.type.AliPayBill;
 import org.bill.type.WechatPayBill;
