@@ -1,8 +1,7 @@
 package org.bill.service;
 
+import org.bill.ui.BillDto;
 import org.bill.ui.BillUI;
-
-import java.io.File;
 
 /**
  * 账单合并实现
@@ -10,13 +9,14 @@ import java.io.File;
 public abstract class AbstractBillMergeService implements BillMergeService{
 
 	@Override
-	public void mergeBill() {
+	public void mergeBill(BillDto billDto) {
+		BillUI billUI = readData(billDto);
 
 	}
 
-	protected abstract BillUI readData(File file);
+	protected abstract BillUI readData(BillDto billDto);
 
-	protected void writeExcelFile() {
+	protected void writeExcelFile(BillDto billDto) {
 
 	}
 

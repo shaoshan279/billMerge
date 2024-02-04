@@ -1,9 +1,8 @@
 package org.bill.type;
 
 import org.bill.service.AbstractBillMergeService;
+import org.bill.ui.BillDto;
 import org.bill.ui.BillUI;
-
-import java.io.File;
 
 /**
  * 类描述：微信支付账单
@@ -12,7 +11,7 @@ import java.io.File;
  */
 public class WechatPayBill extends AbstractBillMergeService {
 	@Override
-	protected BillUI readData(File file) {
+	protected BillUI readData(BillDto billDto) {
 		return null;
 	}
 }
