@@ -1,6 +1,8 @@
 package org.bill;
 
 import org.bill.service.BillMergeFactory;
+import org.bill.ui.BillDto;
+import org.bill.ui.PayEnum;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -11,6 +13,10 @@ import java.util.List;
 public class Main {
 	public static void main(String[] args) {
 		BillMergeFactory billMergeFactory = new BillMergeFactory();
+		billMergeFactory.getBillMerge(PayEnum.WECHAT_PAY.getType())
+				.mergeBill(new BillDto()
+						.setOriginFile("D:\\个人\\流水\\2024-01\\微信支付账单(20240101-20240131)\\微信支付账单(20240101-20240131).csv")
+						.setTargetFile("D:\\个人\\流水\\2024-01\\导出.xlsx"));
 	}
 
 

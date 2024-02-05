@@ -1,7 +1,10 @@
 package org.bill.ui;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
+
+import java.util.List;
 
 /**
  * 类描述：
@@ -10,12 +13,13 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
+@ToString
 public class BillDto {
 
 	private String originFile;
 
 	private String targetFile;
 
-	private BillUI billUI;
+	private List<? extends BillUI> bills;
 
 }
