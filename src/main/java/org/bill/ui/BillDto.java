@@ -16,10 +16,24 @@ import java.util.List;
 @ToString
 public class BillDto {
 
+	/**
+	 * 输入文件
+	 */
 	private String originFile;
 
+	/**
+	 * 输出文件路径
+	 */
 	private String targetFile;
 
+	/**
+	 * 输出文件sheet
+	 */
+	private String targetSheet;
+
+	/**
+	 * 账单数据
+	 */
 	private List<? extends BillUI> bills;
 
 }

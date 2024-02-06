@@ -5,12 +5,11 @@ import com.alibaba.excel.read.listener.PageReadListener;
 import org.bill.service.AbstractBillMergeService;
 import org.bill.ui.AliPayBillUI;
 import org.bill.ui.BillDto;
-import org.bill.ui.BillUI;
 import org.bill.ui.PayEnum;
-import org.bill.ui.WechatPayBillUI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 类描述：支付宝支付账单
@@ -30,5 +29,15 @@ public class AliPayBill extends AbstractBillMergeService {
 			}
 		})).sheet().doRead();
 		return uis;
+	}
+
+	@Override
+	protected void writeExcelFile(BillDto billDto) {
+		// 空数据判断
+		if (!Optional.ofNullable(billDto).map(BillDto::getBills).isPresent()) {
+			return;
+		}
+		List<AliPayBillUI> bills = (List<AliPayBillUI>) billDto.getBills();
+		EasyExcel.write(billDto.getTargetFile(), AliPayBillUI.class).sheet(billDto.getTargetSheet()).doWrite(bills);
 	}
 }

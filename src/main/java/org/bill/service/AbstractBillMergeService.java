@@ -4,7 +4,6 @@ import org.bill.ui.BillDto;
 import org.bill.ui.BillUI;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * 账单合并实现
@@ -22,14 +21,6 @@ public abstract class AbstractBillMergeService implements BillMergeService {
 
 	protected abstract List<? extends BillUI> readData(BillDto billDto);
 
-	protected void writeExcelFile(BillDto billDto) {
-		// 空数据判断
-		if (!Optional.ofNullable(billDto).map(BillDto::getBills).isPresent()) {
-			return;
-		}
-		List<? extends BillUI> bills = billDto.getBills();
-
-
-	}
+	protected abstract void writeExcelFile(BillDto billDto);
 
 }

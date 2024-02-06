@@ -16,7 +16,8 @@ public class Main {
 		billMergeFactory.getBillMerge(PayEnum.WECHAT_PAY.getType())
 				.mergeBill(new BillDto()
 						.setOriginFile("D:\\个人\\流水\\2024-01\\微信支付账单(20240101-20240131)\\微信支付账单(20240101-20240131).csv")
-						.setTargetFile("D:\\个人\\流水\\2024-01\\导出.xlsx"));
+						.setTargetFile("D:\\个人\\流水\\2024-01\\导出.xlsx")
+						.setTargetSheet("2024-01"));
 	}
 
 
@@ -25,16 +26,16 @@ public class Main {
 	 * @param filePath 文件路径
 	 * @param suffix 指定格式
 	 * @return {@link List< File>}
-	 * @throws
 	 * @date 2024-02-04 17:34:59
-	*/
+	 */
 	private List<File> getFiles(String filePath, String suffix) {
 		List<File> fileList = new ArrayList<>();
-		File dirPath = new File(filePath);
-		if (Files.isDirectory(Paths.get(dirPath.getPath()))) {
+		File dir = new File(filePath);
+		if (Files.isDirectory(Paths.get(dir.getPath()))) {
 			// todo 获取目录下所有csv文件
+
 		} else {
-			fileList.add(dirPath);
+			fileList.add(dir);
 		}
 		return fileList;
 	}
