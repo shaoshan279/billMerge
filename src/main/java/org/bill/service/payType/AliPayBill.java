@@ -1,4 +1,4 @@
-package org.bill.type;
+package org.bill.service.payType;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.read.listener.PageReadListener;

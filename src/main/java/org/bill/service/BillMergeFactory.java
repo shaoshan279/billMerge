@@ -1,16 +1,16 @@
 package org.bill.service;
 
 import lombok.NonNull;
-import org.bill.type.AliPayBill;
-import org.bill.type.WechatPayBill;
+import org.bill.service.payType.AliPayBill;
+import org.bill.service.payType.WechatPayBill;
 import org.bill.ui.PayEnum;
 import org.ehcache.impl.internal.concurrent.ConcurrentHashMap;
 
 import java.util.Map;
 
 /**
- * 类描述：
- * @author 8553
+ * 类描述：账单合并工厂类
+ * @author 大广
  * @date 2024-02-04 16:27:10
  */
 public class BillMergeFactory {
