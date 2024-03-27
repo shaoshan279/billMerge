@@ -17,6 +17,11 @@ import java.util.Optional;
  * @date 2024-02-04 15:52:52
  */
 public class AliPayBill extends AbstractBillMergeService {
+
+	public AliPayBill() {
+		this.name = "支付宝账单";
+	}
+
 	@Override
 	protected List<AliPayBillUI> readData(BillDto billDto) {
 		List<AliPayBillUI> uis = new ArrayList<>();

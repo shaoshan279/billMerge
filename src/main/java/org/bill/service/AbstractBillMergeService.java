@@ -10,6 +10,9 @@ import java.util.List;
  */
 public abstract class AbstractBillMergeService implements BillMergeService {
 
+	// 账单类型 (名称)
+	protected String name;
+
 	@Override
 	public void mergeBill(BillDto billDto) {
 		// 读取文件解析成对象
@@ -23,4 +26,7 @@ public abstract class AbstractBillMergeService implements BillMergeService {
 
 	protected abstract void writeExcelFile(BillDto billDto);
 
+	public String getName() {
+		return name;
+	}
 }

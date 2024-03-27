@@ -1,0 +1,8 @@
+server:
+  port: 5656
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://159.75.167.213:13306/bill?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useLocalSessionState=true
+    username: root
+    password: oddfar_imaotai
